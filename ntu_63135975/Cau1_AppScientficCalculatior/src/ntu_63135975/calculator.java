@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JRadioButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ButtonGroup;
 
 public class calculator {
 
@@ -21,6 +22,7 @@ public class calculator {
 	double result;
 	String operation;
 	String answer;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 	
 	/**
 	 * Launch the application.
@@ -509,11 +511,13 @@ public class calculator {
 		frame.getContentPane().add(btnNewButton_10);
 		
 		JRadioButton rdbtnOn = new JRadioButton("ON");
+		buttonGroup.add(rdbtnOn);
 		rdbtnOn.setFont(new Font("Tahoma", Font.BOLD, 16));
 		rdbtnOn.setBounds(20, 95, 60, 26);
 		frame.getContentPane().add(rdbtnOn);
 		
 		JRadioButton rdbtnOff = new JRadioButton("OFF");
+		buttonGroup.add(rdbtnOff);
 		rdbtnOff.setFont(new Font("Tahoma", Font.BOLD, 16));
 		rdbtnOff.setBounds(76, 95, 65, 26);
 		frame.getContentPane().add(rdbtnOff);
