@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ButtonGroup;
 import javax.swing.DropMode;
+import java.awt.SystemColor;
 
 public class calculator {
 
@@ -56,6 +57,7 @@ public class calculator {
 		frame.setBounds(100, 100, 363, 431);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setResizable(false);
 		
 		JLabel lblNewLabel = new JLabel("SCIENTFIC CALCULATOR");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -64,6 +66,8 @@ public class calculator {
 		frame.getContentPane().add(lblNewLabel);
 		
 		textField = new JTextField();
+		textField.setBackground(SystemColor.text);
+		textField.setEditable(false);
 		textField.setFont(new Font("Tahoma", Font.BOLD, 13));
 		textField.setBounds(10, 41, 329, 48);
 		frame.getContentPane().add(textField);
