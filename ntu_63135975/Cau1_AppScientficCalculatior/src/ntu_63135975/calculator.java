@@ -511,6 +511,45 @@ public class calculator {
 		frame.getContentPane().add(btntan);
 		
 		JRadioButton rdbtnOn = new JRadioButton("ON");
+		rdbtnOn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn0.setEnabled(true);
+				btn1.setEnabled(true);
+				btn2.setEnabled(true);
+				btn3.setEnabled(true);
+				btn4.setEnabled(true);
+				btn5.setEnabled(true);
+				btn6.setEnabled(true);
+				btn7.setEnabled(true);
+				btn8.setEnabled(true);
+				btn9.setEnabled(true);
+				btnCham.setEnabled(true);
+				btnR.setEnabled(true);
+				btn1_x.setEnabled(true);
+				btnX_Y.setEnabled(true);
+				btnX_3.setEnabled(true);
+				btnX_2.setEnabled(true);
+				btnN_giaithua.setEnabled(true);
+				btnPlusMinus.setEnabled(true);
+				btnE_X.setEnabled(true);
+				btnlog.setEnabled(true);
+				btnPercent.setEnabled(true);
+				btnsin.setEnabled(true);
+				btncos.setEnabled(true);
+				btntan.setEnabled(true);
+				btnsinh.setEnabled(true);
+				btncosh.setEnabled(true);
+				btntanh.setEnabled(true);
+				btnClear.setEnabled(true);
+				btnBackSpace.setEnabled(true);
+				btnCong.setEnabled(true);
+				btnTru.setEnabled(true);
+				btnNhan.setEnabled(true);
+				btnChia.setEnabled(true);
+				btnBang.setEnabled(true);
+				textField.setEnabled(true);
+			}
+		});
 		buttonGroup.add(rdbtnOn);
 		rdbtnOn.setFont(new Font("Tahoma", Font.BOLD, 16));
 		rdbtnOn.setBounds(20, 95, 60, 26);
@@ -553,6 +592,7 @@ public class calculator {
 				btnNhan.setEnabled(false);
 				btnChia.setEnabled(false);
 				btnBang.setEnabled(false);
+				textField.setEnabled(false);
 			}
 		});
 		buttonGroup.add(rdbtnOff);
