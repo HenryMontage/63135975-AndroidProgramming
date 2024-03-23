@@ -66,7 +66,14 @@ public class calculator {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JButton btnR = new JButton("R");
+		JButton btnR = new JButton("\u221A");
+		btnR.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a = Math.sqrt(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
 		btnR.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		btnR.setBounds(10, 127, 65, 35);
 		frame.getContentPane().add(btnR);
@@ -84,16 +91,39 @@ public class calculator {
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("X^Y");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				first = Double.parseDouble(textField.getText());
+				textField.setText("");
+				operation = "X^Y";
+			}
+		});
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		btnNewButton_2.setBounds(10, 201, 65, 35);
 		frame.getContentPane().add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("X^3");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a = Double.parseDouble(textField.getText());
+				a = a*a*a;
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
 		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		btnNewButton_3.setBounds(10, 238, 65, 35);
 		frame.getContentPane().add(btnNewButton_3);
 		
 		JButton btnNewButton_4 = new JButton("X^2");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a = Double.parseDouble(textField.getText());
+				a = a*a;
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
 		btnNewButton_4.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		btnNewButton_4.setBounds(10, 275, 65, 35);
 		frame.getContentPane().add(btnNewButton_4);
@@ -101,7 +131,14 @@ public class calculator {
 		JButton btnNewButton_5 = new JButton("n!");
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				double a = Double.parseDouble(textField.getText());
+				double fact =1;
+				while(a!=0) {
+					fact = fact	*a;
+					a--;
+				}
+				textField.setText("");
+				textField.setText(textField.getText()+fact);
 			}
 		});
 		btnNewButton_5.setFont(new Font("Tahoma", Font.PLAIN, 21));
@@ -382,6 +419,14 @@ public class calculator {
 				else if(operation == "%")
 				{
 					result = first % second;
+					answer = String.format("%.2f", result);
+					textField.setText(answer);
+				}
+				else if(operation == "X^Y") {
+					double result = 1;
+					for(int i = 0; i < second; i++) {
+						result = first * result;
+					}
 					answer = String.format("%.2f", result);
 					textField.setText(answer);
 				}
