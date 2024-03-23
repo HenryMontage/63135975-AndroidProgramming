@@ -12,6 +12,7 @@ import javax.swing.JRadioButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ButtonGroup;
+import javax.swing.DropMode;
 
 public class calculator {
 
@@ -69,6 +70,7 @@ public class calculator {
 		textField.setColumns(10);
 		
 		JButton btnR = new JButton("\u221A");
+		btnR.setEnabled(false);
 		btnR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.sqrt(Double.parseDouble(textField.getText()));
@@ -81,6 +83,7 @@ public class calculator {
 		frame.getContentPane().add(btnR);
 		
 		JButton btn1_x = new JButton("1/x");
+		btn1_x.setEnabled(false);
 		btn1_x.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = 1/(Double.parseDouble(textField.getText()));
@@ -93,6 +96,7 @@ public class calculator {
 		frame.getContentPane().add(btn1_x);
 		
 		JButton btnX_Y = new JButton("X^Y");
+		btnX_Y.setEnabled(false);
 		btnX_Y.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				first = Double.parseDouble(textField.getText());
@@ -105,6 +109,7 @@ public class calculator {
 		frame.getContentPane().add(btnX_Y);
 		
 		JButton btnX_3 = new JButton("X^3");
+		btnX_3.setEnabled(false);
 		btnX_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Double.parseDouble(textField.getText());
@@ -118,6 +123,7 @@ public class calculator {
 		frame.getContentPane().add(btnX_3);
 		
 		JButton btnX_2 = new JButton("X^2");
+		btnX_2.setEnabled(false);
 		btnX_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Double.parseDouble(textField.getText());
@@ -131,6 +137,7 @@ public class calculator {
 		frame.getContentPane().add(btnX_2);
 		
 		JButton btnN_giaithua = new JButton("n!");
+		btnN_giaithua.setEnabled(false);
 		btnN_giaithua.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Double.parseDouble(textField.getText());
@@ -148,6 +155,7 @@ public class calculator {
 		frame.getContentPane().add(btnN_giaithua);
 		
 		JButton btnPlusMinus = new JButton("+/-");
+		btnPlusMinus.setEnabled(false);
 		btnPlusMinus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Double.parseDouble(String.valueOf(textField.getText()));
@@ -160,6 +168,7 @@ public class calculator {
 		frame.getContentPane().add(btnPlusMinus);
 		
 		JButton btn1 = new JButton("1");
+		btn1.setEnabled(false);
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn1.getText();
@@ -171,6 +180,7 @@ public class calculator {
 		frame.getContentPane().add(btn1);
 		
 		JButton btn4 = new JButton("4");
+		btn4.setEnabled(false);
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn4.getText();
@@ -182,6 +192,7 @@ public class calculator {
 		frame.getContentPane().add(btn4);
 		
 		JButton btn7 = new JButton("7");
+		btn7.setEnabled(false);
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn7.getText();
@@ -193,6 +204,7 @@ public class calculator {
 		frame.getContentPane().add(btn7);
 		
 		JButton btnPercent = new JButton("%");
+		btnPercent.setEnabled(false);
 		btnPercent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				first = Double.parseDouble(textField.getText());
@@ -205,6 +217,7 @@ public class calculator {
 		frame.getContentPane().add(btnPercent);
 		
 		JButton btnlog = new JButton("Log");
+		btnlog.setEnabled(false);
 		btnlog.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.log(Double.parseDouble(textField.getText()));
@@ -217,6 +230,7 @@ public class calculator {
 		frame.getContentPane().add(btnlog);
 		
 		JButton btnE_X = new JButton("e^x");
+		btnE_X.setEnabled(false);
 		btnE_X.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.exp(Double.parseDouble(textField.getText()));
@@ -229,6 +243,7 @@ public class calculator {
 		frame.getContentPane().add(btnE_X);
 		
 		JButton btn0 = new JButton("0");
+		btn0.setEnabled(false);
 		btn0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn0.getText();
@@ -240,6 +255,7 @@ public class calculator {
 		frame.getContentPane().add(btn0);
 		
 		JButton btn2 = new JButton("2");
+		btn2.setEnabled(false);
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn2.getText();
@@ -251,6 +267,7 @@ public class calculator {
 		frame.getContentPane().add(btn2);
 		
 		JButton btn5 = new JButton("5");
+		btn5.setEnabled(false);
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn5.getText();
@@ -262,6 +279,7 @@ public class calculator {
 		frame.getContentPane().add(btn5);
 		
 		JButton btn8 = new JButton("8");
+		btn8.setEnabled(false);
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn8.getText();
@@ -273,6 +291,7 @@ public class calculator {
 		frame.getContentPane().add(btn8);
 		
 		JButton btnClear = new JButton("C");
+		btnClear.setEnabled(false);
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText(null);
@@ -283,6 +302,7 @@ public class calculator {
 		frame.getContentPane().add(btnClear);
 		
 		JButton btnsinh = new JButton("Sinh");
+		btnsinh.setEnabled(false);
 		btnsinh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.sinh(Double.parseDouble(textField.getText()));
@@ -295,6 +315,7 @@ public class calculator {
 		frame.getContentPane().add(btnsinh);
 		
 		JButton btnsin = new JButton("Sin");
+		btnsin.setEnabled(false);
 		btnsin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.asin(Double.parseDouble(textField.getText()));
@@ -307,6 +328,7 @@ public class calculator {
 		frame.getContentPane().add(btnsin);
 		
 		JButton btnCham = new JButton(".");
+		btnCham.setEnabled(false);
 		btnCham.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btnCham.getText();
@@ -318,6 +340,7 @@ public class calculator {
 		frame.getContentPane().add(btnCham);
 		
 		JButton btn3 = new JButton("3");
+		btn3.setEnabled(false);
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn3.getText();
@@ -329,6 +352,7 @@ public class calculator {
 		frame.getContentPane().add(btn3);
 		
 		JButton btn6 = new JButton("6");
+		btn6.setEnabled(false);
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn6.getText();
@@ -340,6 +364,7 @@ public class calculator {
 		frame.getContentPane().add(btn6);
 		
 		JButton btn9 = new JButton("9");
+		btn9.setEnabled(false);
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String number = textField.getText()+btn9.getText();
@@ -351,6 +376,7 @@ public class calculator {
 		frame.getContentPane().add(btn9);
 		
 		JButton btnBackSpace = new JButton("\uF0E7");
+		btnBackSpace.setEnabled(false);
 		btnBackSpace.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String backSpace = null;
@@ -367,6 +393,7 @@ public class calculator {
 		frame.getContentPane().add(btnBackSpace);
 		
 		JButton btncosh = new JButton("Cosh");
+		btncosh.setEnabled(false);
 		btncosh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.cosh(Double.parseDouble(textField.getText()));
@@ -379,6 +406,7 @@ public class calculator {
 		frame.getContentPane().add(btncosh);
 		
 		JButton btncos = new JButton("Cos");
+		btncos.setEnabled(false);
 		btncos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.cos(Double.parseDouble(textField.getText()));
@@ -391,6 +419,7 @@ public class calculator {
 		frame.getContentPane().add(btncos);
 		
 		JButton btnBang = new JButton("=");
+		btnBang.setEnabled(false);
 		btnBang.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				second = Double.parseDouble(textField.getText());
@@ -439,6 +468,7 @@ public class calculator {
 		frame.getContentPane().add(btnBang);
 		
 		JButton btnChia = new JButton("/");
+		btnChia.setEnabled(false);
 		btnChia.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				first = Double.parseDouble(textField.getText());
@@ -451,6 +481,7 @@ public class calculator {
 		frame.getContentPane().add(btnChia);
 		
 		JButton btnNhan = new JButton("*");
+		btnNhan.setEnabled(false);
 		btnNhan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				first = Double.parseDouble(textField.getText());
@@ -463,6 +494,7 @@ public class calculator {
 		frame.getContentPane().add(btnNhan);
 		
 		JButton btnTru = new JButton("-");
+		btnTru.setEnabled(false);
 		btnTru.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				first = Double.parseDouble(textField.getText());
@@ -475,6 +507,7 @@ public class calculator {
 		frame.getContentPane().add(btnTru);
 		
 		JButton btnCong = new JButton("+");
+		btnCong.setEnabled(false);
 		btnCong.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				first = Double.parseDouble(textField.getText());
@@ -487,6 +520,7 @@ public class calculator {
 		frame.getContentPane().add(btnCong);
 		
 		JButton btntanh = new JButton("Tanh");
+		btntanh.setEnabled(false);
 		btntanh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.tanh(Double.parseDouble(textField.getText()));
@@ -499,6 +533,7 @@ public class calculator {
 		frame.getContentPane().add(btntanh);
 		
 		JButton btntan = new JButton("Tan");
+		btntan.setEnabled(false);
 		btntan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.tan(Double.parseDouble(textField.getText()));
@@ -556,8 +591,10 @@ public class calculator {
 		frame.getContentPane().add(rdbtnOn);
 		
 		JRadioButton rdbtnOff = new JRadioButton("OFF");
+		rdbtnOff.setSelected(true);
 		rdbtnOff.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				textField.setText(null);
 				btn0.setEnabled(false);
 				btn1.setEnabled(false);
 				btn2.setEnabled(false);
