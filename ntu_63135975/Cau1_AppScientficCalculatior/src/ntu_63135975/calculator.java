@@ -142,7 +142,7 @@ public class calculator {
 				operation = "%";
 			}
 		});
-		btnPercent.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		btnPercent.setFont(new Font("Tahoma", Font.BOLD, 21));
 		btnPercent.setBounds(76, 201, 65, 35);
 		frame.getContentPane().add(btnPercent);
 		
@@ -206,7 +206,7 @@ public class calculator {
 				textField.setText(null);
 			}
 		});
-		btnClear.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		btnClear.setFont(new Font("Tahoma", Font.BOLD, 21));
 		btnClear.setBounds(142, 201, 65, 35);
 		frame.getContentPane().add(btnClear);
 		
@@ -216,6 +216,13 @@ public class calculator {
 		frame.getContentPane().add(btnNewButton_1_2);
 		
 		JButton btnNewButton_8 = new JButton("Sin");
+		btnNewButton_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a = Math.asin(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
 		btnNewButton_8.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnNewButton_8.setBounds(142, 127, 65, 35);
 		frame.getContentPane().add(btnNewButton_8);
@@ -264,8 +271,19 @@ public class calculator {
 		btn9.setBounds(209, 238, 65, 35);
 		frame.getContentPane().add(btn9);
 		
-		JButton btnBackSpace = new JButton("B");
-		btnBackSpace.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		JButton btnBackSpace = new JButton("\uF0E7");
+		btnBackSpace.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String backSpace = null;
+				if(textField.getText().length()>0) {
+					StringBuilder str = new StringBuilder(textField.getText());
+					str.deleteCharAt(textField.getText().length()-1);
+					backSpace = str.toString();
+					textField.setText(backSpace);
+				}
+			}
+		});
+		btnBackSpace.setFont(new Font("Wingdings", Font.PLAIN, 21));
 		btnBackSpace.setBounds(209, 201, 65, 35);
 		frame.getContentPane().add(btnBackSpace);
 		
@@ -275,6 +293,13 @@ public class calculator {
 		frame.getContentPane().add(btnNewButton_1_3);
 		
 		JButton btnNewButton_9 = new JButton("Cos");
+		btnNewButton_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a = Math.asin(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
 		btnNewButton_9.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnNewButton_9.setBounds(209, 127, 65, 35);
 		frame.getContentPane().add(btnNewButton_9);
@@ -295,7 +320,24 @@ public class calculator {
 					answer = String.format("%.2f", result);
 					textField.setText(answer);
 				}
-				
+				else if(operation == "*")
+				{
+					result = first * second;
+					answer = String.format("%.2f", result);
+					textField.setText(answer);
+				}
+				else if(operation == "/")
+				{
+					result = first / second;
+					answer = String.format("%.2f", result);
+					textField.setText(answer);
+				}
+				else if(operation == "%")
+				{
+					result = first % second;
+					answer = String.format("%.2f", result);
+					textField.setText(answer);
+				}
 			}
 		});
 		btnBang.setFont(new Font("Tahoma", Font.PLAIN, 21));
@@ -310,7 +352,7 @@ public class calculator {
 				operation = "/";
 			}
 		});
-		btnChia.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		btnChia.setFont(new Font("Tahoma", Font.BOLD, 21));
 		btnChia.setBounds(274, 312, 65, 35);
 		frame.getContentPane().add(btnChia);
 		
@@ -322,7 +364,7 @@ public class calculator {
 				operation = "*";
 			}
 		});
-		btnNhan.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		btnNhan.setFont(new Font("Tahoma", Font.BOLD, 21));
 		btnNhan.setBounds(274, 275, 65, 35);
 		frame.getContentPane().add(btnNhan);
 		
@@ -334,7 +376,7 @@ public class calculator {
 				operation = "-";
 			}
 		});
-		btnTru.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		btnTru.setFont(new Font("Tahoma", Font.BOLD, 21));
 		btnTru.setBounds(274, 238, 65, 35);
 		frame.getContentPane().add(btnTru);
 		
@@ -346,7 +388,7 @@ public class calculator {
 				operation = "+";
 			}
 		});
-		btnCong.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		btnCong.setFont(new Font("Tahoma", Font.BOLD, 21));
 		btnCong.setBounds(274, 201, 65, 35);
 		frame.getContentPane().add(btnCong);
 		
