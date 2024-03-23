@@ -80,32 +80,32 @@ public class calculator {
 		btnR.setBounds(10, 127, 65, 35);
 		frame.getContentPane().add(btnR);
 		
-		JButton btnNewButton_1 = new JButton("1/x");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btn1_x = new JButton("1/x");
+		btn1_x.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = 1/(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		btnNewButton_1.setBounds(10, 164, 65, 35);
-		frame.getContentPane().add(btnNewButton_1);
+		btn1_x.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		btn1_x.setBounds(10, 164, 65, 35);
+		frame.getContentPane().add(btn1_x);
 		
-		JButton btnNewButton_2 = new JButton("X^Y");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton btnX_Y = new JButton("X^Y");
+		btnX_Y.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				first = Double.parseDouble(textField.getText());
 				textField.setText("");
 				operation = "X^Y";
 			}
 		});
-		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnNewButton_2.setBounds(10, 201, 65, 35);
-		frame.getContentPane().add(btnNewButton_2);
+		btnX_Y.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnX_Y.setBounds(10, 201, 65, 35);
+		frame.getContentPane().add(btnX_Y);
 		
-		JButton btnNewButton_3 = new JButton("X^3");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JButton btnX_3 = new JButton("X^3");
+		btnX_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Double.parseDouble(textField.getText());
 				a = a*a*a;
@@ -113,12 +113,12 @@ public class calculator {
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnNewButton_3.setBounds(10, 238, 65, 35);
-		frame.getContentPane().add(btnNewButton_3);
+		btnX_3.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnX_3.setBounds(10, 238, 65, 35);
+		frame.getContentPane().add(btnX_3);
 		
-		JButton btnNewButton_4 = new JButton("X^2");
-		btnNewButton_4.addActionListener(new ActionListener() {
+		JButton btnX_2 = new JButton("X^2");
+		btnX_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Double.parseDouble(textField.getText());
 				a = a*a;
@@ -126,12 +126,12 @@ public class calculator {
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_4.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnNewButton_4.setBounds(10, 275, 65, 35);
-		frame.getContentPane().add(btnNewButton_4);
+		btnX_2.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnX_2.setBounds(10, 275, 65, 35);
+		frame.getContentPane().add(btnX_2);
 		
-		JButton btnNewButton_5 = new JButton("n!");
-		btnNewButton_5.addActionListener(new ActionListener() {
+		JButton btnN_giaithua = new JButton("n!");
+		btnN_giaithua.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Double.parseDouble(textField.getText());
 				double fact =1;
@@ -143,9 +143,9 @@ public class calculator {
 				textField.setText(textField.getText()+fact);
 			}
 		});
-		btnNewButton_5.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		btnNewButton_5.setBounds(10, 312, 65, 35);
-		frame.getContentPane().add(btnNewButton_5);
+		btnN_giaithua.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		btnN_giaithua.setBounds(10, 312, 65, 35);
+		frame.getContentPane().add(btnN_giaithua);
 		
 		JButton btnPlusMinus = new JButton("+/-");
 		btnPlusMinus.addActionListener(new ActionListener() {
@@ -204,29 +204,29 @@ public class calculator {
 		btnPercent.setBounds(76, 201, 65, 35);
 		frame.getContentPane().add(btnPercent);
 		
-		JButton btnNewButton_1_1 = new JButton("Log");
-		btnNewButton_1_1.addActionListener(new ActionListener() {
+		JButton btnlog = new JButton("Log");
+		btnlog.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.log(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_1_1.setFont(new Font("Tahoma", Font.PLAIN, 19));
-		btnNewButton_1_1.setBounds(76, 164, 65, 35);
-		frame.getContentPane().add(btnNewButton_1_1);
+		btnlog.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		btnlog.setBounds(76, 164, 65, 35);
+		frame.getContentPane().add(btnlog);
 		
-		JButton btnNewButton_7 = new JButton("e^x");
-		btnNewButton_7.addActionListener(new ActionListener() {
+		JButton btnE_X = new JButton("e^x");
+		btnE_X.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.exp(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_7.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnNewButton_7.setBounds(76, 127, 65, 35);
-		frame.getContentPane().add(btnNewButton_7);
+		btnE_X.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnE_X.setBounds(76, 127, 65, 35);
+		frame.getContentPane().add(btnE_X);
 		
 		JButton btn0 = new JButton("0");
 		btn0.addActionListener(new ActionListener() {
@@ -282,29 +282,29 @@ public class calculator {
 		btnClear.setBounds(142, 201, 65, 35);
 		frame.getContentPane().add(btnClear);
 		
-		JButton btnNewButton_1_2 = new JButton("Sinh");
-		btnNewButton_1_2.addActionListener(new ActionListener() {
+		JButton btnsinh = new JButton("Sinh");
+		btnsinh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.sinh(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_1_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton_1_2.setBounds(142, 164, 65, 35);
-		frame.getContentPane().add(btnNewButton_1_2);
+		btnsinh.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnsinh.setBounds(142, 164, 65, 35);
+		frame.getContentPane().add(btnsinh);
 		
-		JButton btnNewButton_8 = new JButton("Sin");
-		btnNewButton_8.addActionListener(new ActionListener() {
+		JButton btnsin = new JButton("Sin");
+		btnsin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.asin(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_8.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnNewButton_8.setBounds(142, 127, 65, 35);
-		frame.getContentPane().add(btnNewButton_8);
+		btnsin.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnsin.setBounds(142, 127, 65, 35);
+		frame.getContentPane().add(btnsin);
 		
 		JButton btnCham = new JButton(".");
 		btnCham.addActionListener(new ActionListener() {
@@ -366,29 +366,29 @@ public class calculator {
 		btnBackSpace.setBounds(209, 201, 65, 35);
 		frame.getContentPane().add(btnBackSpace);
 		
-		JButton btnNewButton_1_3 = new JButton("Cosh");
-		btnNewButton_1_3.addActionListener(new ActionListener() {
+		JButton btncosh = new JButton("Cosh");
+		btncosh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.cosh(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_1_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton_1_3.setBounds(209, 164, 65, 35);
-		frame.getContentPane().add(btnNewButton_1_3);
+		btncosh.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btncosh.setBounds(209, 164, 65, 35);
+		frame.getContentPane().add(btncosh);
 		
-		JButton btnNewButton_9 = new JButton("Cos");
-		btnNewButton_9.addActionListener(new ActionListener() {
+		JButton btncos = new JButton("Cos");
+		btncos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.cos(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_9.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnNewButton_9.setBounds(209, 127, 65, 35);
-		frame.getContentPane().add(btnNewButton_9);
+		btncos.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btncos.setBounds(209, 127, 65, 35);
+		frame.getContentPane().add(btncos);
 		
 		JButton btnBang = new JButton("=");
 		btnBang.addActionListener(new ActionListener() {
@@ -486,29 +486,29 @@ public class calculator {
 		btnCong.setBounds(274, 201, 65, 35);
 		frame.getContentPane().add(btnCong);
 		
-		JButton btnNewButton_1_4 = new JButton("Tanh");
-		btnNewButton_1_4.addActionListener(new ActionListener() {
+		JButton btntanh = new JButton("Tanh");
+		btntanh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.tanh(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_1_4.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		btnNewButton_1_4.setBounds(274, 164, 65, 35);
-		frame.getContentPane().add(btnNewButton_1_4);
+		btntanh.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btntanh.setBounds(274, 164, 65, 35);
+		frame.getContentPane().add(btntanh);
 		
-		JButton btnNewButton_10 = new JButton("Tan");
-		btnNewButton_10.addActionListener(new ActionListener() {
+		JButton btntan = new JButton("Tan");
+		btntan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double a = Math.tan(Double.parseDouble(textField.getText()));
 				textField.setText("");
 				textField.setText(textField.getText()+a);
 			}
 		});
-		btnNewButton_10.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnNewButton_10.setBounds(274, 127, 65, 35);
-		frame.getContentPane().add(btnNewButton_10);
+		btntan.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btntan.setBounds(274, 127, 65, 35);
+		frame.getContentPane().add(btntan);
 		
 		JRadioButton rdbtnOn = new JRadioButton("ON");
 		buttonGroup.add(rdbtnOn);
@@ -517,6 +517,44 @@ public class calculator {
 		frame.getContentPane().add(rdbtnOn);
 		
 		JRadioButton rdbtnOff = new JRadioButton("OFF");
+		rdbtnOff.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn0.setEnabled(false);
+				btn1.setEnabled(false);
+				btn2.setEnabled(false);
+				btn3.setEnabled(false);
+				btn4.setEnabled(false);
+				btn5.setEnabled(false);
+				btn6.setEnabled(false);
+				btn7.setEnabled(false);
+				btn8.setEnabled(false);
+				btn9.setEnabled(false);
+				btnCham.setEnabled(false);
+				btnR.setEnabled(false);
+				btn1_x.setEnabled(false);
+				btnX_Y.setEnabled(false);
+				btnX_3.setEnabled(false);
+				btnX_2.setEnabled(false);
+				btnN_giaithua.setEnabled(false);
+				btnPlusMinus.setEnabled(false);
+				btnE_X.setEnabled(false);
+				btnlog.setEnabled(false);
+				btnPercent.setEnabled(false);
+				btnsin.setEnabled(false);
+				btncos.setEnabled(false);
+				btntan.setEnabled(false);
+				btnsinh.setEnabled(false);
+				btncosh.setEnabled(false);
+				btntanh.setEnabled(false);
+				btnClear.setEnabled(false);
+				btnBackSpace.setEnabled(false);
+				btnCong.setEnabled(false);
+				btnTru.setEnabled(false);
+				btnNhan.setEnabled(false);
+				btnChia.setEnabled(false);
+				btnBang.setEnabled(false);
+			}
+		});
 		buttonGroup.add(rdbtnOff);
 		rdbtnOff.setFont(new Font("Tahoma", Font.BOLD, 16));
 		rdbtnOff.setBounds(76, 95, 65, 26);
