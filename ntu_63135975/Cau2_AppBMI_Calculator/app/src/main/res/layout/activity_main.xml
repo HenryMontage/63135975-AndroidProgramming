@@ -7,9 +7,26 @@
     android:background="#2c2c2c"
     tools:context=".MainActivity">
 
+    
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bmifinall"
+        android:layout_centerInParent="true"
+        android:id="@+id/logo">
+
+    </ImageView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_centerHorizontal="true"
+        android:text="BMI CALCULATOR"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/logo"
+        android:layout_margin="30dp"
+        android:lineSpacingExtra="2dp">
+    </TextView>
 
 </RelativeLayout>
