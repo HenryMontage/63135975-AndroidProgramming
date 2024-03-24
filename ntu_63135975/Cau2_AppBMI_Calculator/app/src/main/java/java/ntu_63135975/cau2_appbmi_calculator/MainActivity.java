@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("Cân nặng", weight2);
                     intent.putExtra("Tuổi", age2);
                     startActivity(intent);
+
                 }
             }
         });

@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="warn">#FF1313</color>
+    <color name="halfwarn">#483FC8</color>
 </resources>

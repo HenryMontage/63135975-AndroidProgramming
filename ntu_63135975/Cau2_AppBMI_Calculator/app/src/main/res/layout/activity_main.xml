@@ -165,13 +165,6 @@
 
         </RelativeLayout>
 
-
-
-
-
-
-
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -246,20 +239,7 @@
 
         </RelativeLayout>
 
-
-
-
-
-
-
-
     </RelativeLayout>
-
-
-
-
-
-
 
     <RelativeLayout
         android:layout_width="340dp"
@@ -306,15 +286,6 @@
             android:layout_toEndOf="@id/currentheight"
             android:layout_marginStart="20dp">
         </TextView>
-
-
-
-
-
-
-
-
-
 
         <SeekBar
             android:layout_width="match_parent"
