@@ -62,6 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BMI của Bạn là:"
+            android:id="@+id/bmicategory"
             android:textColor="@color/white"
             android:fontFamily="@font/raleway"
             android:layout_marginTop="15dp"

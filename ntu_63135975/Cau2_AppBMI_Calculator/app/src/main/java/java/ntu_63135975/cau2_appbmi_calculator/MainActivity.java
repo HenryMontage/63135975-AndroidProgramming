@@ -16,12 +16,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    android.widget.Button mrecalculatebmi;
+    android.widget.Button mcalculatebmi;
     TextView mcurrentheight;
     TextView mcurrentweight,mcurrentage;
     ImageView mincrementage,mdecrementage,mincrementweight,mdecrementweight;
     SeekBar mseekbarforheight;
-    Button mcalculatebmi;
     RelativeLayout mmale,mfemale;
 
     int intweight=55;
@@ -31,12 +30,16 @@ public class MainActivity extends AppCompatActivity {
     String typerofuser="0";
     String weight2="55";
     String age2="22";
-    @SuppressLint("ResourceAsColor")
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        mcalculatebmi=findViewById(R.id.calculatebmi);
         mcurrentage=findViewById(R.id.currentage);
         mcurrentweight=findViewById(R.id.currentweight);
         mcurrentheight=findViewById(R.id.currentheight);
@@ -44,11 +47,9 @@ public class MainActivity extends AppCompatActivity {
         mdecrementage=findViewById(R.id.decrementage);
         mincrementweight=findViewById(R.id.incrementweight);
         mdecrementweight=findViewById(R.id.decrementweight);
-        mcalculatebmi=findViewById(R.id.calculatebmi);
         mseekbarforheight=findViewById(R.id.seekbarforheight);
         mmale=findViewById(R.id.Nam);
         mfemale=findViewById(R.id.Nu);
-        mrecalculatebmi = findViewById(R.id.calculatebmi);
 
         mmale.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,27 +77,14 @@ public class MainActivity extends AppCompatActivity {
                 currentprogress=progress;
                 mintprogress=String.valueOf(currentprogress);
                 mcurrentheight.setText(mintprogress);
-
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
 
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
-            }
-        });
-
-
-        mincrementweight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intweight=intweight+1;
-                weight2=String.valueOf(intweight);
-                mcurrentweight.setText(weight2);
             }
         });
 
@@ -109,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         mdecrementage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,6 +106,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mincrementweight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intweight=intweight+1;
+                weight2=String.valueOf(intweight);
+                mcurrentweight.setText(weight2);
+            }
+        });
 
         mdecrementweight.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,30 +130,29 @@ public class MainActivity extends AppCompatActivity {
 
                 if(typerofuser.equals("0"))
                 {
-                    Toast.makeText(getApplicationContext(),"Select Your Gender First",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Hãy chọn giới tính của bạn trước!!!",Toast.LENGTH_SHORT).show();
                 }
                 else if(mintprogress.equals("0"))
                 {
-                    Toast.makeText(getApplicationContext(),"Select Your Height First",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Hãy chọn chiều cao của bạn trước!!!",Toast.LENGTH_SHORT).show();
                 }
                 else if(intage==0 || intage<0)
                 {
-                    Toast.makeText(getApplicationContext(),"Age is Incorrect",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Tuổi không chính xác!!!",Toast.LENGTH_SHORT).show();
                 }
 
                 else if(intweight==0|| intweight<0)
                 {
-                    Toast.makeText(getApplicationContext(),"Weight Is Incorrect",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Cân nặng không chính xác!!!",Toast.LENGTH_SHORT).show();
                 }
                 else {
 
                     Intent intent = new Intent(MainActivity.this, BMIActivity.class);
-                    intent.putExtra("gender", typerofuser);
-                    intent.putExtra("height", mintprogress);
-                    intent.putExtra("weight", weight2);
-                    intent.putExtra("age", age2);
+                    intent.putExtra("Giới tính", typerofuser);
+                    intent.putExtra("Chiều cao", mintprogress);
+                    intent.putExtra("Cân nặng", weight2);
+                    intent.putExtra("Tuổi", age2);
                     startActivity(intent);
-
                 }
             }
         });
