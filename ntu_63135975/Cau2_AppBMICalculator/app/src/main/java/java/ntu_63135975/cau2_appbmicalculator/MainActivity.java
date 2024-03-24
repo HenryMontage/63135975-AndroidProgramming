@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     EditText ediWeight, ediFeet, ediInch;
     Button buttonBmiCalculate;
     TextView tvResult;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
         ediInch = findViewById(R.id.ediInch);
         buttonBmiCalculate = findViewById(R.id.buttonBmiCalculate);
         tvResult = findViewById(R.id.tvResult);
+        buttonBmiCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
 
+            }
+        });
     }
 }
