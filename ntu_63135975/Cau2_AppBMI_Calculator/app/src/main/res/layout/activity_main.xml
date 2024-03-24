@@ -4,29 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2c2c2c"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
-    
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/bmifinall"
-        android:layout_centerInParent="true"
-        android:id="@+id/logo">
-
-    </ImageView>
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/centerhorizontalline"
+        android:layout_centerInParent="true">
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/centerverticalline">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="150dp"
+        android:layout_above="@id/centerhorizontalline"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:layout_centerHorizontal="true"
-        android:text="BMI CALCULATOR"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:layout_below="@id/logo"
-        android:layout_margin="30dp"
-        android:lineSpacingExtra="2dp">
-    </TextView>
+        android:id="@+id/heightlayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Chiều Cao"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="170"
+            android:layout_marginBottom="50dp"
+            android:textSize="40sp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:id="@+id/currentheight">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cm"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@id/currentheight"
+            android:layout_marginStart="20dp">
+
+        </TextView>
+        
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:progressTint="#FF4c4c"
+            android:layout_marginRight="10dp"
+            android:id="@+id/seekbarforheight">
+        </SeekBar>
+
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
