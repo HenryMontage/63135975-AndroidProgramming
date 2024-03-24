@@ -16,7 +16,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    android.widget.Button mcalculatebmi;
+    android.widget.Button mrecalculatebmi;
+
     TextView mcurrentheight;
     TextView mcurrentweight,mcurrentage;
     ImageView mincrementage,mdecrementage,mincrementweight,mdecrementweight;
@@ -32,14 +33,12 @@ public class MainActivity extends AppCompatActivity {
     String age2="22";
 
 
-
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        mcalculatebmi=findViewById(R.id.calculatebmi);
+        mrecalculatebmi = findViewById(R.id.calculatebmi);
         mcurrentage=findViewById(R.id.currentage);
         mcurrentweight=findViewById(R.id.currentweight);
         mcurrentheight=findViewById(R.id.currentheight);
@@ -50,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         mseekbarforheight=findViewById(R.id.seekbarforheight);
         mmale=findViewById(R.id.Nam);
         mfemale=findViewById(R.id.Nu);
-
         mmale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 typerofuser="Nam";
             }
         });
-
         mfemale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         mincrementage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,10 +120,9 @@ public class MainActivity extends AppCompatActivity {
                 mcurrentweight.setText(weight2);
             }
         });
-        mcalculatebmi.setOnClickListener(new View.OnClickListener() {
+        mrecalculatebmi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if(typerofuser.equals("0"))
                 {
                     Toast.makeText(getApplicationContext(),"Hãy chọn giới tính của bạn trước!!!",Toast.LENGTH_SHORT).show();
@@ -146,14 +141,12 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Cân nặng không chính xác!!!",Toast.LENGTH_SHORT).show();
                 }
                 else {
-
                     Intent intent = new Intent(MainActivity.this, BMIActivity.class);
                     intent.putExtra("Giới tính", typerofuser);
                     intent.putExtra("Chiều cao", mintprogress);
                     intent.putExtra("Cân nặng", weight2);
                     intent.putExtra("Tuổi", age2);
                     startActivity(intent);
-
                 }
             }
         });
