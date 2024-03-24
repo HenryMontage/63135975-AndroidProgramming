@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 float bmiIndex = weight/ (height*height);
                 tvResult.setText("Chỉ số BMI của bạn là: " + bmiIndex+"\n\nDanh mục BMI:\n" +
                         "Thiếu cân = <18.5\n" +
-                        "Cân nặng bình thường = 18.5–24.9\n" +
+                        "Bình thường = 18.5–24.9\n" +
                         "Thừa cân = 25–29.9\n" +
                         "Béo phì = BMI từ 30 trở lên");
             }
