@@ -8,14 +8,14 @@ import android.view.View;
 
 public class BMIActivity extends AppCompatActivity {
 
-    android.widget.Button mrecalculatebmi;
+    android.widget.Button mcalculatebmi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi);
-        mrecalculatebmi = findViewById(R.id.recalculatebmi);
+        mcalculatebmi = findViewById(R.id.recalculatebmi);
 
-        mrecalculatebmi.setOnClickListener(new View.OnClickListener() {
+        mcalculatebmi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BMIActivity.this, MainActivity.class);
