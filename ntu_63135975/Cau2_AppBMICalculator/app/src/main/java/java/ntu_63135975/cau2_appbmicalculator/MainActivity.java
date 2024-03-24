@@ -3,6 +3,7 @@ package java.ntu_63135975.cau2_appbmicalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,10 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
                 float height = (float) (feet* 0.3048 + inch*0.0254);
                 float bmiIndex = weight/ (height*height);
-
-
-
-
+                tvResult.setText("Your BMI Index is: " + bmiIndex+"\n\nBMI Categories:\n" +
+                        "Underweight = <18.5\n" +
+                        "Normal weight = 18.5–24.9\n" +
+                        "Overweight = 25–29.9\n" +
+                        "Obesity = BMI of 30 or greater ");
             }
         });
     }
