@@ -25,6 +25,18 @@ public class MainActivity extends AppCompatActivity {
         buttonBmiCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String sWeight = ediWeight.getText().toString();
+                String sFeet = ediFeet.getText().toString();
+                String sInch = ediInch.getText().toString();
+
+                float weight = Float.parseFloat(sWeight);
+                float feet = Float.parseFloat(sFeet);
+                float inch = Float.parseFloat(sInch);
+
+                float height = (float) (feet* 0.3048 + inch*0.0254);
+                float bmiIndex = weight/ (height*height);
+
+
 
 
             }
