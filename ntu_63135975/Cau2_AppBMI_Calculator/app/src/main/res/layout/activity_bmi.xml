@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2c2c2c"
-    tools:context=".BMI_Activity">
+    tools:context=".BMIActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -27,6 +27,24 @@
         android:background="@drawable/cardbackground"
         android:layout_centerInParent="true">
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="55"
+            android:id="@+id/bmidisplay"
+            android:layout_centerHorizontal="true">
+        </TextView>
+
+
+
+
+
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,6 +52,7 @@
             android:layout_marginTop="15dp"
             android:textSize="17sp"
             android:textStyle="bold"
+            android:layout_below="@id/bmidisplay"
             android:layout_centerHorizontal="true"
             android:id="@+id/genderdisplay"
             android:textColor="@color/white">
@@ -42,15 +61,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BMI của Bạn thuộc loại:"
+            android:text="BMI của Bạn là:"
             android:textColor="@color/white"
             android:fontFamily="@font/raleway"
             android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true"
-            
+            android:layout_below="@+id/genderdisplay"
+            android:textSize="25sp"
+            android:textStyle="bold">
+        </TextView>
 
     </RelativeLayout>
 
 
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/recalculatebmi"
+        android:textSize="15sp"
+        android:layout_below="@id/contentlayout"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:text="Tính lại BMI của Bạn!!!"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/buttonbackground"
+        android:textStyle="bold">
+    </android.widget.Button>
 
 </RelativeLayout>
