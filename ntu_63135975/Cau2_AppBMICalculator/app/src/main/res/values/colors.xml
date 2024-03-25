@@ -2,6 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="editText_color">#C2FDCF</color>
-    <color name="button_color">#48D767</color>
+    <color name="editText_color">#58B85D</color>
+    <color name="button_color">#AE355E</color>
 </resources>
