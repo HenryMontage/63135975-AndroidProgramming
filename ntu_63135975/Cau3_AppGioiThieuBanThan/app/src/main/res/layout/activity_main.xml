@@ -244,7 +244,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="555dp"
+            android:layout_marginTop="550dp"
             android:text="Bài 1: Scientific_Calculator"
             android:textColor="#EFDFDF"
             android:textSize="13dp"
@@ -265,11 +265,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="272dp"
-            android:layout_marginTop="552dp"
-            android:text="Bài 2:"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="550dp"
+            android:text="Bài 2: BMI Calculator"
             android:textColor="#EFDFDF"
-            android:textSize="17dp"
+            android:textSize="13dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -287,12 +287,12 @@
         <Button
             android:layout_width="385dp"
             android:layout_height="37dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="730dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="728dp"
             android:onClick="redirectionFacebook"
             android:text="Chuyển chế độ xem trang Facebook"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
