@@ -1,6 +1,7 @@
 package java.ntu63135975.usingrecyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,8 +20,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerViewData = getDataForRecyclerView();
         recyclerViewLandscape = findViewById(R.id.recyclerLand);
-        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
-        recyclerViewLandscape.setLayoutManager(layoutLinear);
+
+        //Dang 1 Doc
+        //RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
+        //recyclerViewLandscape.setLayoutManager(layoutLinear);
+
+        //Dang 2 Ngang
+        RecyclerView.LayoutManager layoutLinearHorizonal = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,    false);
+        recyclerViewLandscape.setLayoutManager(layoutLinearHorizonal);
+
+        //Dang 3 Grid
+        //RecyclerView.LayoutManager layoutGrid = new GridLayoutManager(this, 2);
+        //recyclerViewLandscape.setLayoutManager(layoutGrid);
+
         landScapeAdapter = new LandScapeAdapter(this, recyclerViewData);
         recyclerViewLandscape.setAdapter(landScapeAdapter);
     }
