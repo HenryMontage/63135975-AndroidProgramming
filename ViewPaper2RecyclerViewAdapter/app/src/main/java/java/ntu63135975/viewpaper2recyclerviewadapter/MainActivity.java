@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
         viewPager2Land = findViewById(R.id.vp2Land);
         landScapeAdapter = new LandScapeAdapter(this, viewPagerData);
         viewPager2Land.setAdapter(landScapeAdapter);
+
+        //Bổ sung hiệu ứng chuyển trang tài liệu
+        viewPager2Land.setPageTransformer(new ZoomOutPageTransformer());
+        //
+        
         viewPager2Land.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
