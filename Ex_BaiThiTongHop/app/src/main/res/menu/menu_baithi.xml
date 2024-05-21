@@ -2,8 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="Home" />
+        android:id="@+id/navigation_wellcome"
+        android:icon="@android:drawable/star_on"
+        android:title="Wellcome" />
+
+    <item
+        android:id="@+id/navigation_cau1"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Cau 1" />
+
+    <item
+        android:id="@+id/navigation_cau2"
+        android:icon="@android:drawable/stat_sys_phone_call_forward"
+        android:title="Cau 2" />
+
+    <item
+        android:id="@+id/navigation_cau3"
+        android:icon="@android:drawable/ic_popup_reminder"
+        android:title="Cau 3" />
+
+    <item
+        android:id="@+id/navigation_cau4"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Cau 4" />
 </menu>

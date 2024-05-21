@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorSelected">#FF0000</color> <!-- Màu đỏ khi được chọn -->
+    <color name="colorUnselected">#000000</color> <!-- Màu đen khi không được chọn -->
 </resources>
