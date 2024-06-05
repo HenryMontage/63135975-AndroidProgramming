@@ -8,21 +8,21 @@
 
     <item
         android:id="@+id/navigation_cau1"
-        android:icon="@drawable/baseline_brightness_1_24"
+        android:icon="@drawable/baseline_calculate_24"
         android:title="Cau 1" />
 
     <item
         android:id="@+id/navigation_cau2"
-        android:icon="@drawable/baseline_brightness_2_24"
+        android:icon="@drawable/baseline_contact_page_24"
         android:title="Cau 2" />
 
     <item
         android:id="@+id/navigation_cau3"
-        android:icon="@drawable/baseline_brightness_3_24"
+        android:icon="@drawable/baseline_grid_view_24"
         android:title="Cau 3" />
 
     <item
         android:id="@+id/navigation_cau4"
-        android:icon="@drawable/baseline_brightness_4_24"
+        android:icon="@drawable/baseline_dataset_24"
         android:title="Cau 4" />
 </menu>

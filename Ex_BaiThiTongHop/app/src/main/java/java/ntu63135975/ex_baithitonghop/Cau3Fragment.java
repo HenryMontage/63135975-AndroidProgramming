@@ -40,10 +40,10 @@ public class Cau3Fragment extends Fragment {
         super.onCreate(savedInstanceState);
         //3. Chuẩn bị dữ liệu cho List
         list = new ArrayList<LandScape>();
-        list.add(new LandScape("eiffel","Tháp Eiffel (Pháp)"));
-        list.add(new LandScape("langhcm","Lăng Bác Hồ Chí Minh (Việt Nam)"));
-        list.add(new LandScape("nuiphusi","Núi Phú Sĩ (Nhật Bản)"));
-        list.add(new LandScape("vanlytruongthanh","Vạn Lý Trường Thành (Trung Quốc)"));
+        list.add(new LandScape("eiffel",""));
+        list.add(new LandScape("langhcm",""));
+        list.add(new LandScape("nuiphusi",""));
+        list.add(new LandScape("vanlytruongthanh",""));
     }
 
     @Override

@@ -1,5 +1,7 @@
 package java.ntu63135975.ex_baithitonghop;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,23 +9,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Cau2Fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class Cau2Fragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     public Cau2Fragment() {
         // Required empty public constructor
     }
@@ -40,8 +29,6 @@ public class Cau2Fragment extends Fragment {
     public static Cau2Fragment newInstance(String param1, String param2) {
         Cau2Fragment fragment = new Cau2Fragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,16 +36,29 @@ public class Cau2Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cau2, container, false);
+        View view = inflater.inflate(R.layout.fragment_cau2, container, false);
+
+        // Find the button and set an onClickListener
+        Button buttonFacebook = view.findViewById(R.id.button_facebook);
+        buttonFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open Facebook page
+                openFacebookPage();
+            }
+        });
+
+        return view;
     }
+    private void openFacebookPage() {
+        String facebookUrl = "https://www.facebook.com/thaituan.kieu/";
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl));
+        startActivity(intent);
+    }
+
 }
