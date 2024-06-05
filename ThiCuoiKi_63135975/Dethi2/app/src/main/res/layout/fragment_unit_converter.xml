@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/spinner_units"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:entries="@array/units_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edittext_input"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edittext_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập dữ liệu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button_convert"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_units" />
+
+    <Button
+        android:id="@+id/button_convert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CHUYỂN ĐỔI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textview_result"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_input" />
+
+    <TextView
+        android:id="@+id/textview_result"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="KẾT QUẢ"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_convert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

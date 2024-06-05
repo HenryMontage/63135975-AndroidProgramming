@@ -1,0 +1,8 @@
+<resources>
+    <!-- Other strings -->
+    <string-array name="units_array">
+        <item>Km to m</item>
+        <item>Kg to g</item>
+        <item>Byte to Bit</item>
+    </string-array>
+</resources>
